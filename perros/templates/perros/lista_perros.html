@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Perros Perdidos</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Lista de Perros Perdidos</h1>
+
+    {% if perros %}
+        {% for perro in perros %}
+            <div class="perro-container">
+                <h2>{{ perro.nombre }}</h2>
+                <p class="zona"><strong>Zona:</strong> {{ perro.zona }}</p>
+                <p>{{ perro.descripcion }}</p>
+                {% if perro.imagen %}
+                    <img src="{{ perro.imagen.url }}" alt="{{ perro.nombre }}">
+                {% endif %}
+                <hr>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p class="empty-message">No hay perros perdidos publicados todavía.</p>
+    {% endif %}
+</body>
+</html>
