@@ -76,9 +76,10 @@ WSGI_APPLICATION = 'red_perros.wsgi.application'
 
 import dj_database_url
 
+import os
 DATABASES = {
     'default': dj_database_url.config(
-        default='postgresql://perros_datos_user:vPOBphLckrXw5tjEQwgB1mjh3mnAsDA3@dpg-d096cevfte5s73dqjkmg-a/perros_datos'
+        default=os.environ.get('DATABASE_URL')
     )
 }
     
