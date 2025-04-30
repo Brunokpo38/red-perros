@@ -81,8 +81,8 @@ DATABASES = {
         default='postgresql://perros_datos_user:vPOBphLckrXw5tjEQwgB1mjh3mnAsDA3@dpg-d096cevfte5s73dqjkmg-a/perros_datos'
     )
 }
-    }
-}
+    
+
 
 
 # Password validation
