@@ -77,9 +77,9 @@ WSGI_APPLICATION = 'red_perros.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'your_db_name',
-        'USER': 'your_db_user',
-        'PASSWORD': 'your_db_password',
+        'NAME': 'perros_datos',
+        'USER': 'perros_datos_user',
+        'PASSWORD': 'vPOBphLckrXw5tjEQwgB1mjh3mnAsDA3',
         'HOST': 'localhost',
         'PORT': '5432',
     }
